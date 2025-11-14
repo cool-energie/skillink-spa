@@ -14,5 +14,31 @@
 
   button {
     border: 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: var(--ease-out-transition);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -10%;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: var(--btn-hover-color);
+      z-index: -1;
+      transform: skew(45deg);
+      width: 0;
+      transition: var(--ease-out-transition);
+    }
+
+    &:hover {
+      color: white;
+
+      &::before {
+        width: 120%;
+      }
+    }
   }
 }

@@ -8,7 +8,11 @@
     --primary-color: #5BBB7B;
     --light-grey: #F0EFEC;
     --default-transition: .3s linear all;
+    --ease-out-transition: .2s ease-out all;
     --logo-width: 133px;
+    --btn-hover-color: var(--primary-color);
+    --rounded-btn-inline-padding: 30px;
+    --rounded-btn-block-padding: 8px;
 
     @media (min-width: 769px) {
       --btn-radius: 48px;
