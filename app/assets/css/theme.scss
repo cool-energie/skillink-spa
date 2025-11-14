@@ -1,0 +1,17 @@
+@use "fonts";
+@layer theme {
+  html {
+    --default-padding: 16px;
+    --main-font: "DM Sans", sans-serif;
+    --primary-light-color: #F1FCFA;
+    --btn-radius: 8px;
+    --primary-color: #5BBB7B;
+    --light-grey: #F0EFEC;
+    --default-transition: .3s linear all;
+    --logo-width: 133px;
+
+    @media (min-width: 769px) {
+      --btn-radius: 48px;
+    }
+  }
+}
