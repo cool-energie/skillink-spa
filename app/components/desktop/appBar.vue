@@ -4,17 +4,23 @@ import AppMenu from "./appMenu.vue";
 </script>
 
 <template>
-    <div class="app-bar">
-      <img src="/img/logo_white.svg" alt="logo" class="logo" />
-      <app-menu class="app-menu" />
-      <button class="btn--featured rounded">Join</button>
+  <div class="wrapper">
+    <div class="app-bar container margin-auto">
+      <img src="/img/logo_white.svg" alt="logo" class="logo"/>
+      <app-menu class="app-menu"/>
+      <nuxt-link class="font-medium link" to="#">Become a Seller</nuxt-link>
+      <nuxt-link class="font-medium link link" id="btn--sign-in" to="#">Sign in</nuxt-link>
+      <button class="btn--featured btn--rounded">Join</button>
     </div>
+  </div>
 </template>
 
 <style scoped>
 @layer modules {
-  .app-bar {
+  .wrapper {
     background-color: grey;
+  }
+  .app-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,6 +34,28 @@ import AppMenu from "./appMenu.vue";
     color: white;
     align-self: stretch;
     gap: 1.5rem;
+  }
+
+  .link {
+    color: white;
+    margin-inline-end: 1rem;
+    display: none;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+
+    @media (min-width: 993px) {
+      display: block;
+    }
+  }
+
+  #btn--sign-in {
+    display: none;
+
+    @media (min-width: 1200px) {
+      display: block;
+    }
   }
 }
 </style>

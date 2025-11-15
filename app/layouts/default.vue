@@ -23,7 +23,7 @@ import DesktopAppBar from "../components/desktop/appBar.vue";
       display: none;
     }
     .desktop-app-bar {
-      display: flex;
+      display: block;
     }
   }
 }

@@ -7,6 +7,10 @@
     font-family: var(--main-font);
   }
 
+  * {
+    transition: var(--default-transition);
+  }
+
   a {
     text-decoration: none;
     color: unset;
@@ -18,6 +22,8 @@
     z-index: 1;
     overflow: hidden;
     transition: var(--ease-out-transition);
+    font-size: 1rem;
+    cursor: pointer;
 
     &::before {
       content: "";
@@ -32,7 +38,11 @@
       width: 0;
       transition: var(--ease-out-transition);
     }
-
+    &:is(.bg--transparent) {
+      &::before {
+        --btn-hover-color: #FFFFFF20;
+      }
+    }
     &:hover {
       color: white;
 

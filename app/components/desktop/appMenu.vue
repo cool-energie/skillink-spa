@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import CategoriesMenu from "./categoriesMenu.vue";
+
 const menuItems = [
   {
     label: "Home",
@@ -29,6 +31,7 @@ const menuItems = [
 
 <template>
   <div>
+    <categories-menu />
     <nuxt-link v-for="item in menuItems" :to="item.url" class="font-medium">
       {{ item.label }}
     </nuxt-link>
@@ -42,7 +45,7 @@ const menuItems = [
     align-items: center;
     border: 2px solid transparent;
     padding-block: var(--default-padding);
-    &:active {
+    &:active, &:hover {
       border-top: 2px solid var(--primary-color);
     }
   }
