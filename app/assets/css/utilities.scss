@@ -56,4 +56,10 @@
   .sub-text {
     font-size: .9375rem;
   }
+
+  .card {
+    border: 1px solid var(--grey-border-color);
+    padding: 1.8em;
+    border-radius: var(--default-radius);
+  }
 }

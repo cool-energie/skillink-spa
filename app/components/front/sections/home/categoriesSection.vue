@@ -308,10 +308,12 @@ const categories = [
 
 <template>
   <page-section :title="title" :sub-title="subTitle" :link="link">
-    <!--slider>
-      <category-card v-for="category in categories" :sub-categories="category.subCategories.map(sc => sc.group)"
-                     :name="category.name" :nb-skills="category.subCategories.length" :logo="category.icon"/>
-    </slider-->
+    <slider :nb-items="categories.length" :per-page="1" :items="categories">
+      <template #item="{name, icon, subCategories}">
+        <category-card  :sub-categories="subCategories.map(sc => sc.group)"
+                       :name="name" :nb-skills="subCategories.length" :logo="icon"/>
+      </template>
+    </slider>
   </page-section>
 </template>
 
