@@ -8,12 +8,20 @@
   .font-regular {
     font-weight: 400;
   }
+  .font-bold {
+    font-weight: 800;
+  }
   .rounded {
     border-radius: var(--btn-radius);
   }
   .btn--rounded {
     border-radius: var(--btn-radius);
     padding: var(--rounded-btn-block-padding) var(--rounded-btn-inline-padding);
+  }
+
+  .btn, .block {
+    padding-block: 1em;
+    padding-inline: 2em;
   }
 
   .no-scroll {
@@ -28,13 +36,24 @@
   .bg--transparent {
     background-color: transparent;
   }
+  .bg--primary {
+    background-color: var(--primary-color);
+  }
+  button.bg--primary {
+    color: white;
+  }
   .color--white {
     color: white;
   }
   .container {
     max-width: 1900px;
+    margin: auto;
   }
   .margin-auto {
     margin: auto;
+  }
+
+  .sub-text {
+    font-size: .9375rem;
   }
 }

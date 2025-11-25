@@ -9,11 +9,16 @@
 
   * {
     transition: var(--default-transition);
+    box-sizing: border-box;
   }
 
   a {
     text-decoration: none;
     color: unset;
+  }
+
+  h1 {
+    font-size: 2rem;
   }
 
   button {
@@ -24,6 +29,7 @@
     transition: var(--ease-out-transition);
     font-size: 1rem;
     cursor: pointer;
+    border-radius: var(--default-radius);
 
     &::before {
       content: "";
@@ -49,6 +55,12 @@
       &::before {
         width: 120%;
       }
+    }
+  }
+
+  input, select {
+    &:focus {
+      outline-width: 0;
     }
   }
 }

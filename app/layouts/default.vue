@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
-import MobileAppBar from "../components/mobile/appBar.vue";
-import DesktopAppBar from "../components/desktop/appBar.vue";
+import MobileAppBar from "../components/front/mobile/appBar.vue";
+import DesktopAppBar from "../components/front/desktop/appBar.vue";
 </script>
 
 <template>
@@ -18,7 +18,7 @@ import DesktopAppBar from "../components/desktop/appBar.vue";
   .desktop-app-bar {
     display: none;
   }
-  @media (min-width: 769px) {
+  @media (min-width: 768px) {
     .mobile-app-bar {
       display: none;
     }

@@ -1,10 +1,13 @@
 <script setup lang="ts">
 
+import HomeHero from "../components/front/homeHero.vue";
+import CategoriesSection from "../components/front/sections/home/categoriesSection.vue";
 </script>
 
 <template>
   <div>
-    <h1>Welcome to the homepage</h1>
+    <home-hero />
+    <categories-section />
   </div>
 </template>
 
